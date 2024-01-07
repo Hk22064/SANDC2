@@ -1,0 +1,28 @@
+{
+  "name": "react-tutorial1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "serve": "netlify functions:serve",
+    "dev": "vite",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "antd": "^5.11.4",
+    "axios": "^1.6.5",
+    "countapi": "^1.0.0",
+    "countapi-js": "^1.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "netlify-cli": "^17.8.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.1.0",
+    "netlify-cli": "^17.11.1",
+    "vite": "^4.5.0"
+  },
+  "description": ""
+}
