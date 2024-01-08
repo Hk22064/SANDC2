@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Button, Input } from 'antd';
+import { Button } from 'antd';
 
 const PasswordGeneratorComponent = () => {
   const [passwordLength, setPasswordLength] = useState(8); // デフォルトのパスワード長さ
@@ -11,6 +11,7 @@ const PasswordGeneratorComponent = () => {
       .then(response => {
         const password = response.data.password;
         setGeneratedPassword(password);
+        // 生成されたパスワードを利用する処理をここに記述
         console.log('Generated Password:', password);
       })
       .catch(error => {
@@ -21,12 +22,13 @@ const PasswordGeneratorComponent = () => {
   return (
     <div>
       <label>Password Length:</label>
-      <Input.Number
+      <input
+        type="number"
         value={passwordLength}
-        onChange={(value) => setPasswordLength(value)}
+        onChange={(e) => setPasswordLength(parseInt(e.target.value))}
       />
       <Button onClick={handleGeneratePassword}>Generate Password</Button>
-      {generatedPassword && <p>{generatedPassword}</p>}
+      <p>{generatedPassword}</p>
     </div>
   );
 };

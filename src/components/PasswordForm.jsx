@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Input, Button } from 'antd';
+import { Button } from 'antd';
 
 const PasswordForm = () => {
   const [password, setPassword] = useState('');
@@ -31,14 +31,14 @@ const PasswordForm = () => {
 
   return (
     <div>
-      <Input.Password
+      <input
+        type="password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
-        placeholder="Enter password"
       />
       <Button onClick={handleSavePassword}>Save Password</Button>
       <Button onClick={showSavedPassword}>Show Saved Password</Button>
-      {savedPassword && <p>{savedPassword}</p>}
+      <p>{savedPassword}</p>
     </div>
   );
 };
