@@ -1,33 +1,46 @@
 body {
   background: #258bff;
-    font-family: helvetica, sans-serif;
-    width: 750px;
-  }
+  font-family: helvetica, sans-serif;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
   
   label {
     font-weight: bold;
-    background: #ffc125;
     color: #180b06;
     padding: 10px;
-    font-size: medium;
-    width:300px;
+    font-size: 20px;
+    width:500px;
+    margin-top: 50px;
   }
   
   div {
-    padding-bottom: 20px;
+    background: #a77cdb;
+    margin: 0;
   }
   
   input[type="text"] {
     padding: 5px;
     width: 150px;
     background: #ffc125;
+    padding: 10px;
   }
   h2 {
-    background: #edff25;
+    background: #1bad3b;
     color: #180b06;
     padding: 10px;
     font-size: medium;
     width:300px;
+  }
+  header {
+    height: 10;
+    background-color: #1bad3b;
+    color: #030101;
+    padding: 10px;
+    font-size: 20px;
+    width:199%;
+    margin: 0;
   }
   
   p {

@@ -7,7 +7,7 @@ import PasswordGeneratorComponent from './components/PasswordGeneratorComponent'
 const App = () => {
   return (
     <div>
-      <h1>Password Manager App</h1>
+      <header>Password Manager App</header>
       <PasswordForm /> {/* 作成したパスワードフォームを呼び出す */}
       <PasswordGeneratorComponent/>
     </div>
