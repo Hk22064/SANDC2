@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import axios from 'axios';
+import { Button } from 'antd';
 
 const PasswordGeneratorComponent = () => {
   const [passwordLength, setPasswordLength] = useState(8); // デフォルトのパスワード長さ
@@ -26,7 +27,8 @@ const PasswordGeneratorComponent = () => {
         value={passwordLength}
         onChange={(e) => setPasswordLength(parseInt(e.target.value))}
       />
-      <button onClick={handleGeneratePassword}>Generate Password</button>
+      <Button onClick={handleGeneratePassword}>Generate Password</Button>
+      <p>{generatedPassword}</p>
     </div>
   );
 };
