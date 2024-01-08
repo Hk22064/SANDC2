@@ -1,8 +1,6 @@
-// PasswordForm.jsx
-
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Button } from 'antd';
+import { Button, Input } from 'antd';
 
 const PasswordForm = () => {
   const [password, setPassword] = useState('');
@@ -33,8 +31,7 @@ const PasswordForm = () => {
 
   return (
     <div>
-      <input
-        type="password"
+      <Input.Password
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
