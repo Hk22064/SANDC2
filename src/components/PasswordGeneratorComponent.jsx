@@ -11,7 +11,6 @@ const PasswordGeneratorComponent = () => {
       .then(response => {
         const password = response.data.password;
         setGeneratedPassword(password);
-        // 生成されたパスワードを利用する処理をここに記述
         console.log('Generated Password:', password);
       })
       .catch(error => {
@@ -27,7 +26,7 @@ const PasswordGeneratorComponent = () => {
         onChange={(value) => setPasswordLength(value)}
       />
       <Button onClick={handleGeneratePassword}>Generate Password</Button>
-      <p>{generatedPassword}</p>
+      {generatedPassword && <p>{generatedPassword}</p>}
     </div>
   );
 };
