@@ -30,7 +30,7 @@ const PasswordGeneratorComponent = () => {
         onChange={(e) => setPasswordLength(parseInt(e.target.value))}
       />
       <Button onClick={handleGeneratePassword}>Generate Password</Button>
-      <p>{generatePassword}</p>
+      
     </div>
   );
 };
