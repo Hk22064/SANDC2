@@ -6,6 +6,11 @@ body {
   
   label {
     font-weight: bold;
+    background: #ffc125;
+    color: #180b06;
+    padding: 10px;
+    font-size: medium;
+    width:300px;
   }
   
   div {
