@@ -6,11 +6,13 @@ import { Button } from 'antd';
 
 const PasswordGeneratorComponent = () => {
   const [passwordLength, setPasswordLength] = useState(8); // デフォルトのパスワード長さ
+  const [genetatePassword, setgeneratePassword] = useState('');
 
   const handleGeneratePassword = () => {
     axios.post('/.netlify/functions/makePassword', { length: passwordLength })
       .then(response => {
         const generatedPassword = response.data.password;
+        setgeneratePassword(generatedPassword);
         // 生成されたパスワードを利用する処理をここに記述
         console.log('Generated Password:', generatedPassword);
       })
@@ -28,7 +30,7 @@ const PasswordGeneratorComponent = () => {
         onChange={(e) => setPasswordLength(parseInt(e.target.value))}
       />
       <Button onClick={handleGeneratePassword}>Generate Password</Button>
-      <p>{generatedPassword}</p>
+      <p>{generatePassword}</p>
     </div>
   );
 };

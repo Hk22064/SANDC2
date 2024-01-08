@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import axios from 'axios';
+import { Button } from 'antd';
 
 const PasswordForm = () => {
   const [password, setPassword] = useState('');
@@ -37,8 +38,8 @@ const PasswordForm = () => {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <button onClick={handleSavePassword}>Save Password</button>
-      <button onClick={showSavedPassword}>Show Saved Password</button>
+      <Button onClick={handleSavePassword}>Save Password</Button>
+      <Button onClick={showSavedPassword}>Show Saved Password</Button>
       <p>{savedPassword}</p>
     </div>
   );
